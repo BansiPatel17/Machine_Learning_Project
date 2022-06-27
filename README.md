@@ -46,3 +46,37 @@ To check remote url
 ```
 git remote -v
 ```
+To push commited version
+```
+git push origin main
+```
+To setup CI/CD pipline in heroku we need below 3 information
+
+1. HEROKU_EMAIL = bansipatel6899.bp@gmail.com
+2. HEROKU_API_KEY = d00d6ebb-5334-49d2-92cc-aa54e206f669
+3. HEROKU_APP_NAME = ml-regression-project1
+
+
+Build Docker Image
+```
+docker build -t <image_name>:<tag_name> .
+```
+>Note Image name for docker must be in lowercase
+
+```
+To list docker images
+```
+docker images
+```
+To run docker image
+```
+docker run -p 5000:5000 -e PORT=5000 <image ID>
+```
+To check running cotainer in docker
+```
+docker ps
+```
+To stop docker image
+```
+docker stop <container id>
+```
