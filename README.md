@@ -42,3 +42,7 @@ To create version/commit all changes by git
 ```
 git commit -m "message"
 ```
+To check remote url
+```
+git remote -v
+```
