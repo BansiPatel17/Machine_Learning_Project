@@ -53,7 +53,7 @@ git push origin main
 To setup CI/CD pipline in heroku we need below 3 information
 
 1. HEROKU_EMAIL = bansipatel6899.bp@gmail.com
-2. HEROKU_API_KEY = d00d6ebb-5334-49d2-92cc-aa54e206f669
+2. HEROKU_API_KEY = <API Key>
 3. HEROKU_APP_NAME = ml-regression-project1
 
 
@@ -79,4 +79,8 @@ docker ps
 To stop docker image
 ```
 docker stop <container id>
+```
+To install all required libraries install automatically
+```
+python setup.py install
 ```
