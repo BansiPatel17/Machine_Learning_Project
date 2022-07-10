@@ -84,3 +84,5 @@ To install all required libraries install automatically
 ```
 python setup.py install
 ```
+install ipykernel
+```
