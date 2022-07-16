@@ -1,4 +1,3 @@
-from operator import imod
 import sys
 from flask import Flask
 from housing.logger import logging
@@ -14,7 +13,7 @@ def index():
         housing=HousingException(e,sys)
         logging.info(housing.error_message)
         logging.info("We are testing logging module")
-    return "Starting Machine Learning Project"
+    return "CI CD pipeline has been established."
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
