@@ -42,7 +42,7 @@ class DataIngestion:
             return tgz_file_path
 
         except Exception as e:
-            raise HousingException(e,sys)
+            raise HousingException(e,sys) from e
 
     def extract_tgz_file(self, tgz_file_path:str):
         try:
@@ -108,7 +108,7 @@ class DataIngestion:
             return data_ingestion_artifact
 
         except Exception as e:
-            raise HousingException(e,sys)
+            raise HousingException(e,sys) from e
 
     def initiate_data_ingestion(self) -> DataIngestionArtifact:
         try:

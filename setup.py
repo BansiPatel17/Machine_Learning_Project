@@ -8,6 +8,8 @@ AUTHOR="Bansi Patel"
 DESCRIPTION="This is first machine learning project"
 REQUIREMENT_FILE_NAME="requirements.txt"
 
+HYPHEN_E_DOT = "-e ."
+
 def get_requirements_list() -> List[str]:
     """
     Description: This function is going to return list of requiremnets mention
@@ -16,8 +18,12 @@ def get_requirements_list() -> List[str]:
     return this function is going to return a list which contains name of
     libraries mentioned in requiremnets.txt file
     """
-    with open(REQUIREMENT_FILE_NAME) as requiremnet_file:
-        requiremnet_file.readlines().remove("-e .")
+    with open(REQUIREMENT_FILE_NAME) as requirement_file:
+        requirement_list = requirement_file.readlines()
+        requirement_list = [requirement_name.replace("\n", "") for requirement_name in requirement_list]
+        if HYPHEN_E_DOT in requirement_list:
+            requirement_list.remove(HYPHEN_E_DOT)
+        return requirement_list
 
 
 setup(
